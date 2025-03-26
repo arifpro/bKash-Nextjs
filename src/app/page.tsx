@@ -25,6 +25,13 @@ export default function HomePage() {
       >
         Go to checkout
       </Link>
+
+      <Link
+        href="/doc.pdf"
+        className="block mt-4 font-bold py-2 px-4 rounded-md text-center max-w-xs underline"
+      >
+        Bkash Documentation PDF
+      </Link>
     </div>
   );
 }
