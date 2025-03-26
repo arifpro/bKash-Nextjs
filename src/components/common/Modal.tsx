@@ -3,7 +3,6 @@ type ModalProps = {
   onClose: () => void;
   title: string;
   children: React.ReactNode;
-  onConfirm?: () => void;
 };
 
 export default function Modal({
@@ -11,7 +10,6 @@ export default function Modal({
   onClose,
   title,
   children,
-  onConfirm,
 }: ModalProps) {
   if (!isOpen) return null;
 
@@ -43,27 +41,7 @@ export default function Modal({
           </div>
 
           {/* Modal Body */}
-          <div className="relative flex-auto p-6">{children}</div>
-
-          {/* Modal Footer */}
-          <div className="flex items-center justify-end p-6 border-t border-solid rounded-b border-slate-200">
-            <button
-              type="button"
-              className="px-6 py-2 mb-1 mr-2 text-sm font-bold text-slate-600 uppercase transition-all duration-150 ease-linear bg-white border border-slate-200 rounded shadow outline-none hover:bg-slate-100 hover:shadow-md focus:outline-none"
-              onClick={onClose}
-            >
-              Close
-            </button>
-            {onConfirm && (
-              <button
-                type="button"
-                className="px-6 py-2 mb-1 text-sm font-bold text-white uppercase transition-all duration-150 ease-linear bg-blue-600 rounded shadow outline-none hover:bg-blue-700 hover:shadow-lg focus:outline-none"
-                onClick={onConfirm}
-              >
-                Confirm
-              </button>
-            )}
-          </div>
+          <div className="relative flex-auto p-6 py-10">{children}</div>
         </div>
       </div>
     </div>

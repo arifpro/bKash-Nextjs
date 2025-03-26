@@ -16,7 +16,7 @@ const paymentMethodsData = [
   {
     id: "bkash",
     type: "bKash",
-    phoneNumber: "+8801700000000",
+    phoneNumber: "01770618575",
     icon: "/bKash-Logo.svg",
     isDisabled: false,
   },

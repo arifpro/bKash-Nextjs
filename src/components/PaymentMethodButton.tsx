@@ -14,7 +14,7 @@ export default function PaymentMethodButton({
     <button
       key={method.id}
       onClick={onClick}
-      className="w-full flex items-center justify-between p-2 border rounded-lg hover:bg-gray-50 transition"
+      className="w-full flex items-center justify-between p-2 border rounded-lg hover:bg-gray-50 transition cursor-pointer"
       disabled={method.isDisabled}
     >
       <div className="flex items-center">

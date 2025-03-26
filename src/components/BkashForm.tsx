@@ -16,7 +16,7 @@ export default function BkashForm({
         type="text"
         value={bkashNumber}
         onChange={(e) => onChange(e.target.value)}
-        placeholder="+8801XXXXXXXXX"
+        placeholder="01XXXXXXXXX"
         className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3"
       />
     </div>
