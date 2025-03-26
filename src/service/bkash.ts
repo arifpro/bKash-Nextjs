@@ -198,3 +198,8 @@ export const searchTransaction = async (trxID: string) =>
   makeBkashRequest(`${API_BASE}/general/searchTransaction`, {
     trxID,
   });
+
+export const paymentMethods = async () => {
+  const methods = BkashAgreement.find({}).select("payerReference");
+  return methods;
+};

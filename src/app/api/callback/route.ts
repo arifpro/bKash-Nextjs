@@ -39,7 +39,7 @@ export async function GET(req: NextRequest) {
     //   paymentID: 'TR0001AblNpHl1742987158150',
     //   trxID: 'CCQ10MPE1J',
     //   transactionStatus: 'Completed',
-    //   amount: '1000',
+    //   amount: '899',
     //   currency: 'BDT',
     //   intent: 'sale',
     //   paymentExecuteTime: '2025-03-26T17:06:17:499 GMT+0600',

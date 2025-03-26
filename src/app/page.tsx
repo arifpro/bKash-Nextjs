@@ -28,6 +28,8 @@ export default function HomePage() {
 
       <Link
         href="/doc.pdf"
+        passHref
+        target="_blank"
         className="block mt-4 font-bold py-2 px-4 rounded-md text-center max-w-xs underline"
       >
         Bkash Documentation PDF

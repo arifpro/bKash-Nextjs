@@ -59,8 +59,8 @@ export default function AddPaymentMethodModalContent() {
         paymentMode: "add", // add to my payment method list
       };
 
-      const res = await axios.post("/api/make-payment", paymentData);
-      // return { url: res.data.url, error: null };
+      const res = await axios.post("/api/payment", paymentData);
+
       if (res.data.url) {
         router.push(res.data.url);
       } else {

@@ -6,7 +6,7 @@ import axios from "axios";
 import { PaymentMethodType } from "./PaymentMethod";
 
 type Props = {
-  selectedMethod: PaymentMethodType;
+  selectedMethod: PaymentMethodType | null;
 };
 
 export default function CheckoutButton({ selectedMethod }: Props) {
@@ -18,11 +18,11 @@ export default function CheckoutButton({ selectedMethod }: Props) {
     setIsProcessing(true);
     try {
       const paymentData = {
-        phone: selectedMethod.phoneNumber,
+        phone: selectedMethod?.phoneNumber,
         paymentMode: "payment", // make payment with this number
       };
 
-      const res = await axios.post("/api/make-payment", paymentData);
+      const res = await axios.post("/api/payment", paymentData);
 
       if (res.data.url) {
         router.push(res.data.url);
